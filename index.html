@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,13 +15,13 @@
 <header class="nav" id="nav">
   <a class="brand" href="#top" aria-label="MFlow"><img src="assets/logo.svg" alt=""> <span>MFlow</span></a>
   <nav>
-    <a href="#features">Fonctionnalités</a>
-    <a href="#demo">Démo</a>
+    <a href="#features">Features</a>
+    <a href="#demo">Demo</a>
     <a href="#changelog">Changelog</a>
     <a href="#roadmap">Roadmap</a>
     <a href="https://github.com/reqeuss/MFlow" target="_blank" rel="noreferrer">GitHub ↗</a>
   </nav>
-  <a class="nav-cta" href="https://reqeuss.com" target="_blank" rel="noreferrer">Portfolio ↗</a>
+  <div class="lang-wrap"><button class="lang-btn" id="langBtn">EN ▾</button><div class="lang-menu" id="langMenu"><button data-lang="en">English</button><button data-lang="fr">Français</button></div></div><a class="nav-cta" href="https://reqeuss.com" target="_blank" rel="noreferrer">Portfolio ↗</a>
   <button class="menu" id="menu" aria-label="Menu">☰</button>
 </header>
 
@@ -31,10 +31,10 @@
   <div class="hero-copy reveal">
     <div class="eyebrow"><span class="dot"></span> Open source · local · performant</div>
     <h1>Media flows.<br><em>Reimagined.</em></h1>
-    <p class="lead">MFlow est un moteur de traitement média pensé pour les workflows modernes : simple à intégrer, rapide à exécuter et construit pour évoluer.</p>
+    <p class="lead">MFlow is a media processing engine built for modern workflows: easy to integrate, fast to run, and designed to evolve.</p>
     <div class="actions">
-      <a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" rel="noreferrer">Explorer sur GitHub <span>↗</span></a>
-      <a class="button ghost" href="#demo">Voir la démo <span>↓</span></a>
+      <a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" rel="noreferrer">Explore on GitHub <span>↗</span></a>
+      <a class="button ghost" href="#demo">View the demo <span>↓</span></a>
     </div>
     <div class="micro"><span>MIT</span><span>Windows / Linux</span><span>C++</span></div>
   </div>
@@ -60,17 +60,17 @@
 <section class="ticker"><div>OPEN SOURCE <b>✦</b> MEDIA ENGINE <b>✦</b> LOCAL FIRST <b>✦</b> FAST PIPELINES <b>✦</b> OPEN SOURCE <b>✦</b> MEDIA ENGINE <b>✦</b> LOCAL FIRST <b>✦</b></div></section>
 
 <section id="features" class="section">
-  <div class="section-head reveal"><span class="kicker">01 / POURQUOI MFLOW</span><h2>Un moteur qui reste<br><em>à vous.</em></h2><p>Pas de cloud obligatoire. Pas de dépendance propriétaire. Une base native et extensible pour construire vos propres outils média.</p></div>
+  <div class="section-head reveal"><span class="kicker">01 / WHY MFLOW</span><h2>An engine that stays<br><em>yours.</em></h2><p>No mandatory cloud. No proprietary dependency. A native, extensible foundation for building your own media tools.</p></div>
   <div class="feature-grid">
-    <article class="feature reveal"><span class="num">01</span><div class="icon">⚡</div><h3>Rapide par conception</h3><p>Architecture native C++ et exécution parallèle pour exploiter efficacement les ressources disponibles.</p></article>
-    <article class="feature reveal"><span class="num">02</span><div class="icon">◎</div><h3>Local first</h3><p>Les traitements peuvent rester sur votre machine. Vos fichiers restent là où vous les avez placés.</p></article>
-    <article class="feature reveal"><span class="num">03</span><div class="icon">⌘</div><h3>Composable</h3><p>Construisez des pipelines avec des étapes indépendantes : source, transformation, sortie et futures extensions.</p></article>
-    <article class="feature reveal"><span class="num">04</span><div class="icon">↗</div><h3>Open source</h3><p>Le code est public, modifiable et pensé pour accueillir des contributions et des intégrations.</p></article>
+    <article class="feature reveal"><span class="num">01</span><div class="icon">⚡</div><h3>Fast by design</h3><p>Native C++ architecture and parallel execution designed to use available resources efficiently.</p></article>
+    <article class="feature reveal"><span class="num">02</span><div class="icon">◎</div><h3>Local first</h3><p>Processing can stay on your machine. Your files stay where you put them.</p></article>
+    <article class="feature reveal"><span class="num">03</span><div class="icon">⌘</div><h3>Composable</h3><p>Build pipelines from independent stages: source, transformation, output, and future extensions.</p></article>
+    <article class="feature reveal"><span class="num">04</span><div class="icon">↗</div><h3>Open source</h3><p>The code is public, modifiable, and designed for contributions and integrations.</p></article>
   </div>
 </section>
 
 <section id="demo" class="section pipeline-section">
-  <div class="section-head reveal"><span class="kicker">02 / DÉMO</span><h2>Des médias.<br><em>Un flux.</em></h2><p>MFlow organise les opérations comme un pipeline lisible. Chaque étape peut être optimisée ou remplacée sans réécrire tout le système.</p></div>
+  <div class="section-head reveal"><span class="kicker">02 / DEMO</span><h2>Media.<br><em>One flow.</em></h2><p>MFlow organizes operations as a readable pipeline. Each stage can be optimized or replaced without rewriting the whole system.</p></div>
   <div class="pipeline reveal">
     <div class="node"><small>01</small><strong>Source</strong><span>Input media</span></div><div class="connector"><i></i></div>
     <div class="node active"><small>02</small><strong>Transform</strong><span>Processing</span></div><div class="connector"><i></i></div>
@@ -80,29 +80,29 @@
 </section>
 
 <section id="changelog" class="section changelog-section">
-  <div class="section-head reveal"><span class="kicker">03 / CHANGELOG</span><h2>Le projet<br><em>évolue.</em></h2><p>Suivez les changements importants de MFlow directement depuis le dépôt.</p></div>
+  <div class="section-head reveal"><span class="kicker">03 / CHANGELOG</span><h2>The project<br><em>evolves.</em></h2><p>Follow important MFlow changes directly from the repository.</p></div>
   <div class="changelog">
-    <article class="release reveal"><div><span>v0.1.0</span><small>Fondations</small></div><ul><li>Core C++ et système de pipeline</li><li>Benchmark multithread</li><li>Commandes <code>info</code> et <code>benchmark</code></li><li>Build CMake multiplateforme</li></ul><a href="https://github.com/reqeuss/MFlow/releases" target="_blank" rel="noreferrer">Voir les releases ↗</a></article>
-    <article class="release next reveal"><div><span>v0.2.x</span><small>En développement</small></div><ul><li>Traitement vidéo réel</li><li>Conversion média native</li><li>Pipeline plus complet</li><li>Préparation des futures extensions</li></ul><a href="https://github.com/reqeuss/MFlow/commits/main" target="_blank" rel="noreferrer">Voir les commits ↗</a></article>
+    <article class="release reveal"><div><span>v0.1.0</span><small>Foundations</small></div><ul><li>Core C++ et système de pipeline</li><li>Benchmark multithread</li><li>Commandes <code>info</code> et <code>benchmark</code></li><li>Build CMake multiplateforme</li></ul><a href="https://github.com/reqeuss/MFlow/releases" target="_blank" rel="noreferrer">View releases ↗</a></article>
+    <article class="release next reveal"><div><span>v0.2.x</span><small>In development</small></div><ul><li>Real video processing</li><li>Native media conversion</li><li>More complete pipeline</li><li>Preparing future extensions</li></ul><a href="https://github.com/reqeuss/MFlow/commits/main" target="_blank" rel="noreferrer">View commits ↗</a></article>
   </div>
 </section>
 
 <section class="stats">
-  <div><strong>12</strong><span>threads testés</span></div><div><strong>200K</strong><span>tasks benchmark</span></div><div><strong>6.04</strong><span>ms sur le benchmark v0.1</span></div><div><strong>100%</strong><span>open source</span></div>
+  <div><strong>12</strong><span>threads tested</span></div><div><strong>200K</strong><span>benchmark tasks</span></div><div><strong>6.04</strong><span>ms on the v0.1 benchmark</span></div><div><strong>100%</strong><span>open source</span></div>
 </section>
 
 <section id="roadmap" class="section roadmap-section">
-  <div class="section-head reveal"><span class="kicker">04 / ROADMAP</span><h2>La suite se<br><em>construit maintenant.</em></h2></div>
+  <div class="section-head reveal"><span class="kicker">04 / ROADMAP</span><h2>The next chapter is<br><em>being built now.</em></h2></div>
   <div class="roadmap">
-    <div class="road active reveal"><span>v0.1</span><div><b>Core & pipelines</b><p>Fondations C++, benchmark, pipeline source → transform → sink.</p></div><i>✓</i></div>
-    <div class="road current reveal"><span>v0.2</span><div><b>Real media conversion</b><p>Le moteur évolue vers le traitement vidéo réel, sans simplement envelopper un ancien outil.</p></div><i>●</i></div>
-    <div class="road reveal"><span>v0.3+</span><div><b>Extensions & integrations</b><p>Plus de formats, accélération matérielle, API et outils pour les développeurs.</p></div><i>○</i></div>
+    <div class="road active reveal"><span>v0.1</span><div><b>Core & pipelines</b><p>C++ foundations, benchmark, source → transform → sink pipeline.</p></div><i>✓</i></div>
+    <div class="road current reveal"><span>v0.2</span><div><b>Real media conversion</b><p>The engine is evolving toward real video processing, without simply wrapping an old tool.</p></div><i>●</i></div>
+    <div class="road reveal"><span>v0.3+</span><div><b>Extensions & integrations</b><p>More formats, hardware acceleration, APIs, and developer tools.</p></div><i>○</i></div>
   </div>
 </section>
 
 <section class="community reveal">
-  <div><span class="kicker">05 / MFLOW</span><h2>Open source.<br><em>Built in public.</em></h2><p>Le code, les versions et les évolutions du projet sont accessibles publiquement. Suivez MFlow, testez-le et contribuez.</p></div>
-  <div class="community-actions"><a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" rel="noreferrer">GitHub ↗</a><a class="button ghost" href="https://reqeuss.com" target="_blank" rel="noreferrer">Mon portfolio ↗</a></div>
+  <div><span class="kicker">05 / MFLOW</span><h2>Open source.<br><em>Built in public.</em></h2><p>The code, releases, and evolution of the project are public. Follow MFlow, test it, and contribute.</p></div>
+  <div class="community-actions"><a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" rel="noreferrer">GitHub ↗</a><a class="button ghost" href="https://reqeuss.com" target="_blank" rel="noreferrer">My portfolio ↗</a></div>
 </section>
 </main>
 
