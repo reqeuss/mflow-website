@@ -11,3 +11,56 @@ translations.pt={...base,features:'Recursos',demo:'Demonstração',changelog:'Al
 translations.ja={...base,features:'機能',demo:'デモ',changelog:'変更履歴',roadmap:'ロードマップ',portfolio:'ポートフォリオ ↗',eyebrow:'オープンソース · ローカル · 高性能',heroTitle:'メディアフローを<br><em>再設計。</em>',heroLead:'MFlowは現代的なワークフロー向けのメディア処理エンジンです。',whyKicker:'01 / MFLOWについて',whyTitle:'自分で使える<br><em>エンジン。</em>',whyLead:'必須クラウドなし。独自依存なし。拡張可能なネイティブ基盤。',f1t:'高速設計',f1p:'ネイティブC++と並列実行。',f2t:'ローカル優先',f2p:'処理を自分のPCで完結できます。',f3t:'組み合わせ可能',f3p:'独立したステージでパイプラインを構築。',f4t:'オープンソース',f4p:'コードは公開され、変更できます。',demoKicker:'02 / デモ',demoTitle:'メディア。<br><em>ひとつのフロー。</em>',demoLead:'MFlowは処理を分かりやすいパイプラインとして整理します。',source:'入力元',input:'入力メディア',transform:'変換',processing:'処理中',sink:'出力',output:'出力メディア',changeKicker:'03 / 変更履歴',changeTitle:'プロジェクトは<br><em>進化中。</em>',changeLead:'リポジトリからMFlowの変更を確認できます。',released:'リリース済み',dev:'開発中',releases:'リリースを見る ↗',commits:'コミットを見る ↗',roadKicker:'04 / ロードマップ',roadTitle:'次の章を<br><em>今作っています。</em>',r1t:'コアとパイプライン',r1p:'C++基盤、ベンチマーク、パイプライン。',r2t:'実際のメディア変換',r2p:'実際の動画処理へ進化。',r3t:'拡張と統合',r3p:'対応形式、ハードウェアアクセラレーション、APIを拡張。',ctaTitle:'オープンソース。<br><em>公開開発。</em>',ctaLead:'コードと開発状況は公開されています。',github:'GitHub ↗',myPortfolio:'ポートフォリオ ↗',footer:'オープンソース・メディアエンジン。'};
 function setLanguage(lang){const t=translations[lang]||base;localStorage.setItem('mflow-lang',lang);document.documentElement.lang=lang;langBtn.textContent=lang.toUpperCase()+' ▾';document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=t[e.dataset.i18n]??base[e.dataset.i18n]??'');document.querySelectorAll('[data-i18n-html]').forEach(e=>e.innerHTML=t[e.dataset.i18nHtml]??base[e.dataset.i18nHtml]??'');langMenu.classList.remove('open')}
 langBtn?.addEventListener('click',()=>langMenu.classList.toggle('open'));document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));addEventListener('click',e=>{if(!e.target.closest('.lang-wrap'))langMenu.classList.remove('open')});setLanguage(localStorage.getItem('mflow-lang')||'en');
+/* ===== Premium interaction layer ===== */
+const glow=document.createElement('div');
+glow.className='cursor-glow';
+document.body.appendChild(glow);
+
+const particles=document.createElement('div');
+particles.className='floating-grid';
+for(let i=0;i<28;i++){
+  const p=document.createElement('span');
+  p.style.left=(Math.random()*100)+'%';
+  p.style.setProperty('--x',((Math.random()-.5)*180)+'px');
+  p.style.setProperty('--d',(6+Math.random()*9)+'s');
+  p.style.animationDelay=(-Math.random()*12)+'s';
+  particles.appendChild(p);
+}
+document.querySelector('.hero')?.appendChild(particles);
+
+let tx=innerWidth/2,ty=innerHeight/2,gx=tx,gy=ty;
+addEventListener('pointermove',e=>{
+  tx=e.clientX;ty=e.clientY;
+  document.documentElement.style.setProperty('--mx',(e.clientX/innerWidth*100)+'%');
+  document.documentElement.style.setProperty('--my',(e.clientY/innerHeight*100)+'%');
+});
+function animatePointer(){
+  gx+=(tx-gx)*.16;gy+=(ty-gy)*.16;
+  glow.style.left=gx+'px';glow.style.top=gy+'px';
+  requestAnimationFrame(animatePointer);
+}
+animatePointer();
+
+document.querySelectorAll('.feature').forEach(card=>{
+  card.addEventListener('pointermove',e=>{
+    const r=card.getBoundingClientRect();
+    card.style.setProperty('--cx',((e.clientX-r.left)/r.width*100)+'%');
+    card.style.setProperty('--cy',((e.clientY-r.top)/r.height*100)+'%');
+    const rx=((e.clientY-r.top)/r.height-.5)*-5;
+    const ry=((e.clientX-r.left)/r.width-.5)*5;
+    card.style.transform=`perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-5px)`;
+  });
+  card.addEventListener('pointerleave',()=>card.style.transform='');
+});
+
+const heroCard=document.querySelector('.hero-card');
+addEventListener('pointermove',e=>{
+  if(!heroCard || innerWidth<900)return;
+  const x=(e.clientX/innerWidth-.5),y=(e.clientY/innerHeight-.5);
+  heroCard.style.transform=`perspective(1200px) rotateX(${y*-3}deg) rotateY(${x*4}deg) rotate(1deg) translate3d(${x*8}px,${y*8}px,0)`;
+});
+addEventListener('scroll',()=>{
+  const hero=document.querySelector('.hero');
+  const copy=document.querySelector('.hero-copy');
+  if(hero&&copy&&scrollY<innerHeight) copy.style.transform=`translate3d(0,${scrollY*.055}px,0)`;
+});
