@@ -1,23 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#08090d"><meta name="description" content="MFlow — open-source media engine.">
-<title>MFlow — Media flows, reimagined.</title><link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="MFlow is an open-source, native C++20 media engine for fast, local-first media processing pipelines on Windows and Linux.">
+<meta name="keywords" content="MFlow, media engine, C++, C++20, open source, video processing, media processing, Windows, Linux, native media engine">
+<meta name="author" content="Reqeuss">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://mflow.reqeuss.com/">
+<link rel="alternate" hreflang="en" href="https://mflow.reqeuss.com/">
+<link rel="alternate" hreflang="fr" href="https://mflow.reqeuss.com/?lang=fr">
+<link rel="alternate" hreflang="es" href="https://mflow.reqeuss.com/?lang=es">
+<link rel="alternate" hreflang="de" href="https://mflow.reqeuss.com/?lang=de">
+<link rel="alternate" hreflang="it" href="https://mflow.reqeuss.com/?lang=it">
+<link rel="alternate" hreflang="pt" href="https://mflow.reqeuss.com/?lang=pt">
+<link rel="alternate" hreflang="ja" href="https://mflow.reqeuss.com/?lang=ja">
+<link rel="alternate" hreflang="x-default" href="https://mflow.reqeuss.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MFlow">
+<meta property="og:title" content="MFlow — Native media processing, reimagined.">
+<meta property="og:description" content="Open-source native C++20 media engine for fast, local-first processing pipelines.">
+<meta property="og:url" content="https://mflow.reqeuss.com/">
+<meta property="og:image" content="https://mflow.reqeuss.com/assets/logo.svg">
+<meta property="og:image:alt" content="MFlow logo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MFlow — Native media processing, reimagined.">
+<meta name="twitter:description" content="Open-source native C++20 media engine for Windows and Linux.">
+<meta name="twitter:image" content="https://mflow.reqeuss.com/assets/logo.svg">
+<meta name="twitter:image:alt" content="MFlow logo">
+<meta name="application-name" content="MFlow">
+<meta name="apple-mobile-web-app-title" content="MFlow">
+<meta name="google-site-verification" content="">
+<script type="application/ld+json">{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"MFlow",
+  "alternateName":"MFlow Media Engine",
+  "applicationCategory":"MultimediaApplication",
+  "operatingSystem":"Windows, Linux",
+  "softwareVersion":"0.4.1",
+  "releaseNotes":"https://github.com/reqeuss/MFlow/releases/tag/v0.4.1",
+  "license":"https://opensource.org/licenses/MIT",
+  "codeRepository":"https://github.com/reqeuss/MFlow",
+  "url":"https://mflow.reqeuss.com/",
+  "author":{"@type":"Person","name":"Reqeuss","url":"https://reqeuss.com"},
+  "description":"Open-source native C++20 media engine for local-first media processing pipelines."
+}</script>
+<title>MFlow 0.4.1 — Native media processing, reimagined.</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <div class="noise"></div><div class="progress" id="progress"></div>
 <header class="nav" id="nav">
-<a class="brand" href="#top"><img src="assets/logo.svg" alt=""><span>MFlow</span></a>
-<nav id="navLinks"><a href="#features" data-i18n="features"></a><a href="#demo" data-i18n="demo"></a><a href="#changelog" data-i18n="changelog"></a><a href="#roadmap" data-i18n="roadmap"></a><a href="https://github.com/reqeuss/MFlow" target="_blank">GitHub ↗</a></nav>
+<a class="brand" href="#top"><img src="assets/logo.svg" alt="MFlow logo"><span>MFlow</span></a>
+<nav id="navLinks"><a href="#features" data-i18n="features"></a><a href="#demo" data-i18n="demo"></a><a href="#changelog" data-i18n="changelog"></a><a href="#roadmap" data-i18n="roadmap"></a><a href="https://github.com/reqeuss/MFlow" target="_blank" rel="noopener">GitHub ↗</a></nav>
 <div class="lang-wrap"><button class="lang-btn" id="langBtn">EN ▾</button><div class="lang-menu" id="langMenu"><button data-lang="en">🇬🇧 English</button><button data-lang="fr">🇫🇷 Français</button><button data-lang="es">🇪🇸 Español</button><button data-lang="de">🇩🇪 Deutsch</button><button data-lang="it">🇮🇹 Italiano</button><button data-lang="pt">🇵🇹 Português</button><button data-lang="ja">🇯🇵 日本語</button></div></div>
-<a class="nav-cta" href="https://reqeuss.com" target="_blank" data-i18n="portfolio"></a><button class="menu" id="menu">☰</button>
+<a class="nav-cta" href="https://reqeuss.com" target="_blank" rel="noopener" data-i18n="portfolio"></a><button class="menu" id="menu" aria-label="Open navigation menu">☰</button>
 </header>
 <main id="top">
 <section class="hero"><div class="orb orb-a"></div><div class="orb orb-b"></div>
 <div class="hero-copy reveal"><div class="eyebrow"><span class="dot"></span><span data-i18n="eyebrow"></span></div>
 <h1 data-i18n-html="heroTitle"></h1><p class="lead" data-i18n="heroLead"></p>
-<div class="actions"><a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank">Explore on GitHub <span>↗</span></a><a class="button ghost" href="https://mflow.reqeuss.com/#demo">View the demo <span>↓</span></a></div>
+<div class="actions"><a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" rel="noopener">Explore on GitHub <span>↗</span></a><a class="button ghost" href="#demo">View the demo <span>↓</span></a></div>
 <div class="micro"><span>v0.4.1</span><span>MIT</span><span>Windows / Linux</span><span>C++20</span></div></div>
 <div class="hero-card reveal delay"><div class="window-top"><span></span><span></span><span></span><b>mflow</b></div><pre><i>$</i> mflow version
 
@@ -39,17 +85,17 @@
 <div class="terminal reveal"><span class="prompt">mflow</span> pipeline <span class="muted">source</span> → <span class="accent">transform</span> → <span class="muted">sink</span><span class="cursor">▋</span></div></section>
 <section id="changelog" class="section"><div class="section-head reveal"><span class="kicker" data-i18n="changeKicker"></span><h2 data-i18n-html="changeTitle"></h2><p data-i18n="changeLead"></p></div>
 <div class="changelog release-grid">
-<article class="release reveal featured"><div><span>v0.4.1</span><small>18 Sep 2026 · Latest</small></div><h3>User-Local Installation</h3><p>The latest release makes MFlow easy to install and run from any terminal without administrator privileges.</p><ul><li>User-local installation</li><li>Windows + Linux support</li><li><code>mflow</code> available from any terminal</li><li>No external multimedia executable</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.4.1" target="_blank">Read release ↗</a></article>
-<article class="release reveal"><div><span>v0.4.0</span><small>18 Sep 2026</small></div><h3>Native Packet &amp; Stream Foundation</h3><p>MFlow now has the reusable native media data model required for real processing pipelines.</p><ul><li>Packet + Stream models</li><li>PTS / DTS / duration timestamps</li><li>Thread-safe packet queues</li><li>Native MediaContext</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.4.0" target="_blank">Read release ↗</a></article>
-<article class="release reveal"><div><span>v0.3.0</span><small>17 Sep 2026</small></div><h3>Native Media Engine Foundation</h3><p>MFlow moved away from the external backend approach and established its independent native media foundation.</p><ul><li>Native media engine foundation</li><li>Native probing + buffered I/O</li><li>Cross-platform C++20</li><li>Explicit unsupported operations</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.3.0" target="_blank">Read release ↗</a></article>
-<article class="release reveal"><div><span>v0.2.0</span><small>16 Sep 2026</small></div><h3>Native Media Engine Architecture</h3><p>The project began its transition into an independent engine built around work-aware media processing.</p><ul><li>Native media architecture</li><li>Work-aware processing</li><li>Memory + scheduler foundations</li><li>Hardware-aware design</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.2.0" target="_blank">Read release ↗</a></article>
-<article class="release reveal"><div><span>v0.1.0</span><small>16 Sep 2026</small></div><h3>Foundation Release</h3><p>The first release established the scheduler, modular pipeline, CLI, benchmarks and C++20 build foundation.</p><ul><li>Core scheduler</li><li>Modular pipeline</li><li>CLI + benchmarks</li><li>CMake / C++20 foundation</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.1.0" target="_blank">Read release ↗</a></article>
+<article class="release reveal featured"><div><span>v0.4.1</span><small>18 Sep 2026 · Latest</small></div><h3>User-Local Installation</h3><p>The latest release makes MFlow easy to install and run from any terminal without administrator privileges.</p><ul><li>User-local installation</li><li>Windows + Linux support</li><li><code>mflow</code> available from any terminal</li><li>No external multimedia executable</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.4.1" target="_blank" rel="noopener">Read release ↗</a></article>
+<article class="release reveal"><div><span>v0.4.0</span><small>18 Sep 2026</small></div><h3>Native Packet &amp; Stream Foundation</h3><p>MFlow now has the reusable native media data model required for real processing pipelines.</p><ul><li>Packet + Stream models</li><li>PTS / DTS / duration timestamps</li><li>Thread-safe packet queues</li><li>Native MediaContext</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.4.0" target="_blank" rel="noopener">Read release ↗</a></article>
+<article class="release reveal"><div><span>v0.3.0</span><small>17 Sep 2026</small></div><h3>Native Media Engine Foundation</h3><p>MFlow moved away from the external backend approach and established its independent native media foundation.</p><ul><li>Native media engine foundation</li><li>Native probing + buffered I/O</li><li>Cross-platform C++20</li><li>Explicit unsupported operations</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.3.0" target="_blank" rel="noopener">Read release ↗</a></article>
+<article class="release reveal"><div><span>v0.2.0</span><small>16 Sep 2026</small></div><h3>Native Media Engine Architecture</h3><p>The project began its transition into an independent engine built around work-aware media processing.</p><ul><li>Native media architecture</li><li>Work-aware processing</li><li>Memory + scheduler foundations</li><li>Hardware-aware design</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.2.0" target="_blank" rel="noopener">Read release ↗</a></article>
+<article class="release reveal"><div><span>v0.1.0</span><small>16 Sep 2026</small></div><h3>Foundation Release</h3><p>The first release established the scheduler, modular pipeline, CLI, benchmarks and C++20 build foundation.</p><ul><li>Core scheduler</li><li>Modular pipeline</li><li>CLI + benchmarks</li><li>CMake / C++20 foundation</li></ul><a href="https://github.com/reqeuss/MFlow/releases/tag/v0.1.0" target="_blank" rel="noopener">Read release ↗</a></article>
 </div></div></section>
 <section class="stats"><div><strong>0.4.1</strong><span data-i18n="s1"></span></div><div><strong>5</strong><span data-i18n="s2"></span></div><div><strong>C++20</strong><span data-i18n="s3"></span></div><div><strong>MIT</strong><span data-i18n="s4"></span></div></section>
 <section id="roadmap" class="section"><div class="section-head reveal"><span class="kicker" data-i18n="roadKicker"></span><h2 data-i18n-html="roadTitle"></h2></div><div class="roadmap">
 <div class="road active reveal"><span>v0.4.x</span><div><b data-i18n="r1t"></b><p data-i18n="r1p"></p></div><i>●</i></div>
 <div class="road current reveal"><span>v0.5.x</span><div><b data-i18n="r2t"></b><p data-i18n="r2p"></p></div><i>○</i></div>
 <div class="road reveal"><span>Future</span><div><b data-i18n="r3t"></b><p data-i18n="r3p"></p></div><i>○</i></div></div></section>
-<section class="community reveal"><div><span class="kicker">05 / MFLOW</span><h2 data-i18n-html="ctaTitle"></h2><p data-i18n="ctaLead"></p></div><div class="community-actions"><a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" data-i18n="github"></a><a class="button ghost" href="https://reqeuss.com" target="_blank" data-i18n="myPortfolio"></a></div></section>
-</main><footer><div class="brand"><img src="assets/logo.svg" alt=""><span>MFlow</span></div><span data-i18n="footer"></span><a href="mailto:contact@reqeuss.com">contact@reqeuss.com</a><span>© 2026 Reqeuss</span></footer>
+<section class="community reveal"><div><span class="kicker">05 / MFLOW</span><h2 data-i18n-html="ctaTitle"></h2><p data-i18n="ctaLead"></p></div><div class="community-actions"><a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" rel="noopener" data-i18n="github"></a><a class="button ghost" href="https://reqeuss.com" target="_blank" rel="noopener" data-i18n="myPortfolio"></a></div></section>
+</main><footer><div class="brand"><img src="assets/logo.svg" alt="MFlow logo"><span>MFlow</span></div><span data-i18n="footer"></span><a href="mailto:contact@reqeuss.com">contact@reqeuss.com</a><span>© 2026 Reqeuss</span></footer>
 <script src="assets/app.js"></script></body></html>
