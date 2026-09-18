@@ -1,46 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#08090d">
-<meta name="description" content="MFlow — moteur open-source de traitement média rapide, moderne et local.">
-<title>MFlow — Media flows, reimagined.</title>
-<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090d"><meta name="description" content="MFlow — open-source media engine.">
+<title>MFlow — Media flows, reimagined.</title><link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="noise"></div>
-<div class="progress" id="progress"></div>
+<div class="noise"></div><div class="progress" id="progress"></div>
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="MFlow"><img src="assets/logo.svg" alt=""> <span>MFlow</span></a>
-  <nav>
-    <a href="#features">Features</a>
-    <a href="#demo">Demo</a>
-    <a href="#changelog">Changelog</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="https://github.com/reqeuss/MFlow" target="_blank" rel="noreferrer">GitHub ↗</a>
-  </nav>
-  <div class="lang-wrap"><button class="lang-btn" id="langBtn">EN ▾</button><div class="lang-menu" id="langMenu"><button data-lang="en">English</button><button data-lang="fr">Français</button></div></div><a class="nav-cta" href="https://reqeuss.com" target="_blank" rel="noreferrer">Portfolio ↗</a>
-  <button class="menu" id="menu" aria-label="Menu">☰</button>
+<a class="brand" href="#top"><img src="assets/logo.svg" alt=""><span>MFlow</span></a>
+<nav id="navLinks"><a href="#features" data-i18n="features"></a><a href="#demo" data-i18n="demo"></a><a href="#changelog" data-i18n="changelog"></a><a href="#roadmap" data-i18n="roadmap"></a><a href="https://github.com/reqeuss/MFlow" target="_blank">GitHub ↗</a></nav>
+<div class="lang-wrap"><button class="lang-btn" id="langBtn">EN ▾</button><div class="lang-menu" id="langMenu"><button data-lang="en">🇬🇧 English</button><button data-lang="fr">🇫🇷 Français</button><button data-lang="es">🇪🇸 Español</button><button data-lang="de">🇩🇪 Deutsch</button><button data-lang="it">🇮🇹 Italiano</button><button data-lang="pt">🇵🇹 Português</button><button data-lang="ja">🇯🇵 日本語</button></div></div>
+<a class="nav-cta" href="https://reqeuss.com" target="_blank" data-i18n="portfolio"></a><button class="menu" id="menu">☰</button>
 </header>
-
 <main id="top">
-<section class="hero">
-  <div class="orb orb-a"></div><div class="orb orb-b"></div>
-  <div class="hero-copy reveal">
-    <div class="eyebrow"><span class="dot"></span> Open source · local · performant</div>
-    <h1>Media flows.<br><em>Reimagined.</em></h1>
-    <p class="lead">MFlow is a media processing engine built for modern workflows: easy to integrate, fast to run, and designed to evolve.</p>
-    <div class="actions">
-      <a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" rel="noreferrer">Explore on GitHub <span>↗</span></a>
-      <a class="button ghost" href="#demo">View the demo <span>↓</span></a>
-    </div>
-    <div class="micro"><span>MIT</span><span>Windows / Linux</span><span>C++</span></div>
-  </div>
-  <div class="hero-card reveal delay">
-    <div class="window-top"><span></span><span></span><span></span><b>mflow</b></div>
-    <pre><i>$</i> mflow info
+<section class="hero"><div class="orb orb-a"></div><div class="orb orb-b"></div>
+<div class="hero-copy reveal"><div class="eyebrow"><span class="dot"></span><span data-i18n="eyebrow"></span></div>
+<h1 data-i18n-html="heroTitle"></h1><p class="lead" data-i18n="heroLead"></p>
+<div class="actions"><a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" data-i18n="githubBtn"></a><a class="button ghost" href="#demo" data-i18n="demoBtn"></a></div>
+<div class="micro"><span>MIT</span><span>Windows / Linux</span><span>C++</span></div></div>
+<div class="hero-card reveal delay"><div class="window-top"><span></span><span></span><span></span><b>mflow</b></div><pre><i>$</i> mflow info
 
   MFlow <strong>0.1.0</strong>
   platform     windows
@@ -52,61 +31,21 @@
   workers      12
   tasks        200000
   time         <strong>6.0457 ms</strong>
-  checksum     <strong>verified</strong></pre>
-    <div class="scan"></div>
-  </div>
-</section>
-
+  checksum     <strong>verified</strong></pre><div class="scan"></div></div></section>
 <section class="ticker"><div>OPEN SOURCE <b>✦</b> MEDIA ENGINE <b>✦</b> LOCAL FIRST <b>✦</b> FAST PIPELINES <b>✦</b> OPEN SOURCE <b>✦</b> MEDIA ENGINE <b>✦</b> LOCAL FIRST <b>✦</b></div></section>
-
-<section id="features" class="section">
-  <div class="section-head reveal"><span class="kicker">01 / WHY MFLOW</span><h2>An engine that stays<br><em>yours.</em></h2><p>No mandatory cloud. No proprietary dependency. A native, extensible foundation for building your own media tools.</p></div>
-  <div class="feature-grid">
-    <article class="feature reveal"><span class="num">01</span><div class="icon">⚡</div><h3>Fast by design</h3><p>Native C++ architecture and parallel execution designed to use available resources efficiently.</p></article>
-    <article class="feature reveal"><span class="num">02</span><div class="icon">◎</div><h3>Local first</h3><p>Processing can stay on your machine. Your files stay where you put them.</p></article>
-    <article class="feature reveal"><span class="num">03</span><div class="icon">⌘</div><h3>Composable</h3><p>Build pipelines from independent stages: source, transformation, output, and future extensions.</p></article>
-    <article class="feature reveal"><span class="num">04</span><div class="icon">↗</div><h3>Open source</h3><p>The code is public, modifiable, and designed for contributions and integrations.</p></article>
-  </div>
-</section>
-
-<section id="demo" class="section pipeline-section">
-  <div class="section-head reveal"><span class="kicker">02 / DEMO</span><h2>Media.<br><em>One flow.</em></h2><p>MFlow organizes operations as a readable pipeline. Each stage can be optimized or replaced without rewriting the whole system.</p></div>
-  <div class="pipeline reveal">
-    <div class="node"><small>01</small><strong>Source</strong><span>Input media</span></div><div class="connector"><i></i></div>
-    <div class="node active"><small>02</small><strong>Transform</strong><span>Processing</span></div><div class="connector"><i></i></div>
-    <div class="node"><small>03</small><strong>Sink</strong><span>Output</span></div>
-  </div>
-  <div class="terminal reveal"><span class="prompt">mflow</span> pipeline <span class="muted">source</span> → <span class="accent">transform</span> → <span class="muted">sink</span><span class="cursor">▋</span></div>
-</section>
-
-<section id="changelog" class="section changelog-section">
-  <div class="section-head reveal"><span class="kicker">03 / CHANGELOG</span><h2>The project<br><em>evolves.</em></h2><p>Follow important MFlow changes directly from the repository.</p></div>
-  <div class="changelog">
-    <article class="release reveal"><div><span>v0.1.0</span><small>Foundations</small></div><ul><li>Core C++ et système de pipeline</li><li>Benchmark multithread</li><li>Commandes <code>info</code> et <code>benchmark</code></li><li>Build CMake multiplateforme</li></ul><a href="https://github.com/reqeuss/MFlow/releases" target="_blank" rel="noreferrer">View releases ↗</a></article>
-    <article class="release next reveal"><div><span>v0.2.x</span><small>In development</small></div><ul><li>Real video processing</li><li>Native media conversion</li><li>More complete pipeline</li><li>Preparing future extensions</li></ul><a href="https://github.com/reqeuss/MFlow/commits/main" target="_blank" rel="noreferrer">View commits ↗</a></article>
-  </div>
-</section>
-
-<section class="stats">
-  <div><strong>12</strong><span>threads tested</span></div><div><strong>200K</strong><span>benchmark tasks</span></div><div><strong>6.04</strong><span>ms on the v0.1 benchmark</span></div><div><strong>100%</strong><span>open source</span></div>
-</section>
-
-<section id="roadmap" class="section roadmap-section">
-  <div class="section-head reveal"><span class="kicker">04 / ROADMAP</span><h2>The next chapter is<br><em>being built now.</em></h2></div>
-  <div class="roadmap">
-    <div class="road active reveal"><span>v0.1</span><div><b>Core & pipelines</b><p>C++ foundations, benchmark, source → transform → sink pipeline.</p></div><i>✓</i></div>
-    <div class="road current reveal"><span>v0.2</span><div><b>Real media conversion</b><p>The engine is evolving toward real video processing, without simply wrapping an old tool.</p></div><i>●</i></div>
-    <div class="road reveal"><span>v0.3+</span><div><b>Extensions & integrations</b><p>More formats, hardware acceleration, APIs, and developer tools.</p></div><i>○</i></div>
-  </div>
-</section>
-
-<section class="community reveal">
-  <div><span class="kicker">05 / MFLOW</span><h2>Open source.<br><em>Built in public.</em></h2><p>The code, releases, and evolution of the project are public. Follow MFlow, test it, and contribute.</p></div>
-  <div class="community-actions"><a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" rel="noreferrer">GitHub ↗</a><a class="button ghost" href="https://reqeuss.com" target="_blank" rel="noreferrer">My portfolio ↗</a></div>
-</section>
-</main>
-
-<footer><div class="brand"><img src="assets/logo.svg" alt=""> <span>MFlow</span></div><span>Open source media engine.</span><a href="mailto:contact@reqeuss.com">contact@reqeuss.com</a><span>© 2026 Reqeuss</span></footer>
-<script src="assets/app.js"></script>
-</body>
-</html>
+<section id="features" class="section"><div class="section-head reveal"><span class="kicker" data-i18n="whyKicker"></span><h2 data-i18n-html="whyTitle"></h2><p data-i18n="whyLead"></p></div>
+<div class="feature-grid"><article class="feature reveal"><span class="num">01</span><div class="icon">⚡</div><h3 data-i18n="f1t"></h3><p data-i18n="f1p"></p></article><article class="feature reveal"><span class="num">02</span><div class="icon">◎</div><h3 data-i18n="f2t"></h3><p data-i18n="f2p"></p></article><article class="feature reveal"><span class="num">03</span><div class="icon">⌘</div><h3 data-i18n="f3t"></h3><p data-i18n="f3p"></p></article><article class="feature reveal"><span class="num">04</span><div class="icon">↗</div><h3 data-i18n="f4t"></h3><p data-i18n="f4p"></p></article></div></section>
+<section id="demo" class="section pipeline-section"><div class="section-head reveal"><span class="kicker" data-i18n="demoKicker"></span><h2 data-i18n-html="demoTitle"></h2><p data-i18n="demoLead"></p></div>
+<div class="pipeline reveal"><div class="node"><small>01</small><strong data-i18n="source"></strong><span data-i18n="input"></span></div><div class="connector"><i></i></div><div class="node active"><small>02</small><strong data-i18n="transform"></strong><span data-i18n="processing"></span></div><div class="connector"><i></i></div><div class="node"><small>03</small><strong data-i18n="sink"></strong><span data-i18n="output"></span></div></div>
+<div class="terminal reveal"><span class="prompt">mflow</span> pipeline <span class="muted">source</span> → <span class="accent">transform</span> → <span class="muted">sink</span><span class="cursor">▋</span></div></section>
+<section id="changelog" class="section"><div class="section-head reveal"><span class="kicker" data-i18n="changeKicker"></span><h2 data-i18n-html="changeTitle"></h2><p data-i18n="changeLead"></p></div>
+<div class="changelog"><article class="release reveal"><div><span>v0.1.0</span><small data-i18n="released"></small></div><ul><li data-i18n="c1"></li><li data-i18n="c2"></li><li data-i18n="c3"></li><li data-i18n="c4"></li></ul><a href="https://github.com/reqeuss/MFlow/releases" target="_blank" data-i18n="releases"></a></article>
+<article class="release next reveal"><div><span>v0.2.x</span><small data-i18n="dev"></small></div><ul><li data-i18n="c5"></li><li data-i18n="c6"></li><li data-i18n="c7"></li><li data-i18n="c8"></li></ul><a href="https://github.com/reqeuss/MFlow/commits/main" target="_blank" data-i18n="commits"></a></article></div></section>
+<section class="stats"><div><strong>12</strong><span data-i18n="s1"></span></div><div><strong>200K</strong><span data-i18n="s2"></span></div><div><strong>6.04</strong><span data-i18n="s3"></span></div><div><strong>100%</strong><span data-i18n="s4"></span></div></section>
+<section id="roadmap" class="section"><div class="section-head reveal"><span class="kicker" data-i18n="roadKicker"></span><h2 data-i18n-html="roadTitle"></h2></div><div class="roadmap">
+<div class="road active reveal"><span>v0.1</span><div><b data-i18n="r1t"></b><p data-i18n="r1p"></p></div><i>✓</i></div>
+<div class="road current reveal"><span>v0.2</span><div><b data-i18n="r2t"></b><p data-i18n="r2p"></p></div><i>●</i></div>
+<div class="road reveal"><span>v0.3+</span><div><b data-i18n="r3t"></b><p data-i18n="r3p"></p></div><i>○</i></div></div></section>
+<section class="community reveal"><div><span class="kicker">05 / MFLOW</span><h2 data-i18n-html="ctaTitle"></h2><p data-i18n="ctaLead"></p></div><div class="community-actions"><a class="button primary" href="https://github.com/reqeuss/MFlow" target="_blank" data-i18n="github"></a><a class="button ghost" href="https://reqeuss.com" target="_blank" data-i18n="myPortfolio"></a></div></section>
+</main><footer><div class="brand"><img src="assets/logo.svg" alt=""><span>MFlow</span></div><span data-i18n="footer"></span><a href="mailto:contact@reqeuss.com">contact@reqeuss.com</a><span>© 2026 Reqeuss</span></footer>
+<script src="assets/app.js"></script></body></html>
